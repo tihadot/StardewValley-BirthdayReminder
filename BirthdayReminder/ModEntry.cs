@@ -14,7 +14,7 @@ namespace BirthdayReminder
         /// <param name="helper">Provides simplified APIs for writing mods.</param>
         public override void Entry(IModHelper helper)
         {
-            helper.Events.GameLoop.DayStarted += OnDayStarted;
+            helper.Events.GameLoop.DayStarted += this.OnDayStarted;
         }
 
         /*********
@@ -25,9 +25,12 @@ namespace BirthdayReminder
         /// <param name="e">The event data.</param>
         private void OnDayStarted(object sender, EventArgs e)
         {
-            NPC bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
-            string bdayMsg = "Today's birthday: " + bdayNPC.Name;
-            Game1.addHUDMessage(new HUDMessage(bdayMsg, 2));
+            if (Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth) != null)
+            {
+                NPC bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
+                string bdayMsg = "Today's birthday: " + bdayNPC.Name;
+                Game1.addHUDMessage(new HUDMessage(bdayMsg, 2));
+            }
         }
     }
 }
