@@ -1,0 +1,10 @@
+﻿{
+  "Name": "BirthdayReminder",
+  "Author": "tihadot",
+  "Version": "1.0.0",
+  "Description": "A message will remind you of villagers' birthdays on the current day",
+  "UniqueID": "tihadot.BirthdayReminder",
+  "EntryDll": "BirthdayReminder.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [ "GitHub:tihadot/StardewValley-BirthdayReminder" ]
+}
