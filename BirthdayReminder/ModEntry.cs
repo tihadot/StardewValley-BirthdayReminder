@@ -28,7 +28,7 @@ namespace BirthdayReminder
             if (Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth) != null)
             {
                 NPC bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
-                string bdayMsg = "Today's birthday: " + bdayNPC.Name;
+                string bdayMsg = Helper.Translation.Get("bday-today") + bdayNPC.Name;
                 Game1.addHUDMessage(new HUDMessage(bdayMsg, 2));
             }
         }
