@@ -25,11 +25,47 @@ namespace BirthdayReminder
         /// <param name="e">The event data.</param>
         private void OnDayStarted(object sender, EventArgs e)
         {
-            if (Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth) != null)
+
+            // Check for today's birthday
+            NPC bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
+            if (bdayNPC != null)
             {
-                NPC bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
-                string bdayMsg = Helper.Translation.Get("bday-today") + bdayNPC.Name;
+                bdayNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
+                string bdayMsg = Helper.Translation.Get("bday-today") + bdayNPC.getName();
                 Game1.addHUDMessage(new HUDMessage(bdayMsg, 2));
+            }
+
+            // Check for tomorrow's birthday
+            NPC bdayTomorrowNPC;
+
+            // Tomorrow could be in another season. We have to take this into account.
+            if (Game1.dayOfMonth <= 27)
+                bdayTomorrowNPC = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth + 1);
+            else
+            {
+                string nextSeason = Game1.currentSeason;
+                switch (Game1.currentSeason)
+                {
+                    case "spring":
+                        nextSeason = "summer";
+                        break;
+                    case "summer":
+                        nextSeason = "fall";
+                        break;
+                    case "fall":
+                        nextSeason = "winter";
+                        break;
+                    case "winter":
+                        nextSeason = "spring";
+                        break;
+                }
+                bdayTomorrowNPC = Utility.getTodaysBirthdayNPC(nextSeason, 1);
+            }
+
+            if (bdayTomorrowNPC != null)
+            {
+                string bdayTomorrowMsg = Helper.Translation.Get("bday-tomorrow") + bdayTomorrowNPC.getName();
+                Game1.addHUDMessage(new HUDMessage(bdayTomorrowMsg, 2));
             }
         }
     }
