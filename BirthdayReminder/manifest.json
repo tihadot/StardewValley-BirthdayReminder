@@ -1,7 +1,7 @@
-﻿{
+{
   "Name": "BirthdayReminder",
   "Author": "tihadot",
-  "Version": "1.4.0",
+  "Version": "1.5.0",
   "Description": "A message will remind you of villagers' birthdays on the current or next day",
   "UniqueID": "tihadot.BirthdayReminder",
   "EntryDll": "BirthdayReminder.dll",

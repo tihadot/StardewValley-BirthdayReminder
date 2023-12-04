@@ -1,7 +1,9 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayReminder", "BirthdayReminder\BirthdayReminder.csproj", "{BBC89CCE-9DFB-4B79-BFF6-F7ADA26FDEFA}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayReminder", "BirthdayReminder\BirthdayReminder.csproj", "{0E955F0E-A698-44A2-BB08-91164B311A77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,33 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BBC89CCE-9DFB-4B79-BFF6-F7ADA26FDEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BBC89CCE-9DFB-4B79-BFF6-F7ADA26FDEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BBC89CCE-9DFB-4B79-BFF6-F7ADA26FDEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BBC89CCE-9DFB-4B79-BFF6-F7ADA26FDEFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E955F0E-A698-44A2-BB08-91164B311A77}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{0E955F0E-A698-44A2-BB08-91164B311A77}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{0E955F0E-A698-44A2-BB08-91164B311A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E955F0E-A698-44A2-BB08-91164B311A77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		Policies = $0
-		$0.TextStylePolicy = $1
-		$1.FileWidth = 80
-		$1.TabsToSpaces = True
-		$1.scope = text/plain
-		$0.DotNetNamingPolicy = $2
-		$2.DirectoryNamespaceAssociation = PrefixedHierarchical
-		$0.TextStylePolicy = $3
-		$3.TabsToSpaces = True
-		$3.NoTabsAfterNonTabs = True
-		$3.scope = text/x-fsharp
-		$0.FSharpFormattingPolicy = $4
-		$4.DefaultFormat = $5
-		$5.IndentOnTryWith = False
-		$5.ReorderOpenDeclaration = False
-		$5.SpaceAfterComma = True
-		$5.SpaceAfterSemicolon = True
-		$5.SpaceAroundDelimiter = True
-		$5.SpaceBeforeArgument = True
-		$5.SpaceBeforeColon = True
-		$5.__added = 0
-		$4.scope = text/x-fsharp
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {119403A3-A774-4A76-9C66-249E558ED01B}
 	EndGlobalSection
 EndGlobal
